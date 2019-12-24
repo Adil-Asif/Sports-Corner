@@ -151,13 +151,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Admin.cpp" />
-    <ClCompile Include="Login.cpp" />
-    <ClCompile Include="Sports Corner.cpp" />
+    <ClInclude Include="Admin.h" />
+    <ClInclude Include="BST.h" />
+    <ClInclude Include="Hashtag.h" />
+    <ClInclude Include="Heap.h" />
+    <ClInclude Include="info.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="Login.h" />
+    <ClInclude Include="Queue.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Admin.h" />
-    <ClInclude Include="Login.h" />
+    <ClCompile Include="Sports Corner.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

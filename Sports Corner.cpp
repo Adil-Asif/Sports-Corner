@@ -1,11 +1,33 @@
 // Sports Corner.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+#include "User.h"
+#include "Utility.h"
+#include "Admin.h"
+#include <string>
 
-#include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	system("Color B0");
+
+	string url;
+	cout << "Enter Url: ";
+	cin >> url;
+	
+	if (url == "User")
+	{
+		user user;
+	}
+	else if( url== "Admin")
+	{
+		Admin admin;
+		admin.signin();
+	}
+	
+	
+	
+	
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

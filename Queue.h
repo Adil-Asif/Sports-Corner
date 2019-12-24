@@ -6,18 +6,18 @@ using namespace std;
 
 
 template <typename T>
-struct Node
+struct QNode
 {
      T  data;
-	Node<T>* Next;
+	QNode<T>* Next;
 
-	Node()
+	QNode()
 	{
 		data = NULL;
 		Next = NULL;
 	}
 
-	Node(T data, Node<T>* Next)
+	QNode(T data, QNode<T>* Next)
 	{
 		this->data = data;
 		this->Next = Next;   //It will point to the next element in the Queue
@@ -29,7 +29,7 @@ template <typename T>
 class Queue
 {
 private:
-	Node<T>* First; //This pointer points to the first element in the queue
+	QNode<T>* First; //This pointer points to the first element in the queue
 
 public:
 
@@ -41,12 +41,12 @@ public:
 	{
 		if (IsEmpty())
 		{
-			this->First = new Node<T>(this->element, NULL);
+			this->First = new QNode<T>(this->element, NULL);
 		}
 		else
 		{
 
-			this->First = new Node<T>(this->element, this->First);
+			this->First = new QNode<T>(this->element, this->First);
 		}
 	}
 
@@ -54,7 +54,7 @@ public:
 	{
 		if (!IsEmpty())
 		{
-			Node<T>* Temp = this->First;
+			QNode<T>* Temp = this->First;
 			this->First = this->First->Next;
 			delete Temp;
 		}
@@ -62,7 +62,7 @@ public:
 
 	bool IsEmpty()
 	{
-		return (this->First==NULL)
+		return (this->First == NULL);
 	}
 
 	void Top()
